@@ -1,0 +1,6 @@
+\begin{tikzpicture}
+\draw[fill=gray!45] (0,0) rectangle (8,1) node[anchor=base] at(4,0.35) {Ein Rechteck};
+\draw[fill=orange!60] (0,1) rectangle (8,2 )node[anchor=base] at(4,1.35) {Noch ein Rechteck};
+\draw[fill=white] (0,2) rectangle (4,3) node[anchor=base] at(2,2.35) {linke H\"alfte};
+\draw[fill=white] (4,2) rectangle (8,3) node[anchor=base] at(6,2.35) {rechte H\"alfte};
+\end{tikzpicture}
