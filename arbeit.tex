@@ -2,6 +2,7 @@
 %	Konfiguration: in texmaker unter Benutzer -> Benutzerbefehle einen neuen Befehl anlegen: pdflatex -synctex=1 -interaction=nonstopmode %.tex | bibtex % | makeindex -s config/index.ist % | makeindex %.nlo -s nomencl.ist -o %.nls | pdflatex -synctex=1 -interaction=nonstopmode %.tex | pdflatex -synctex=1 -interaction=nonstopmode %.tex
 %	Entsprechende Informationen in den config/metainfo verändern
 %   Beispieldokument entsteht bei Kompilierung nach oben angegebener Reihenfolge
+\newcommand{\lang}{ngerman}
 
 \input{config/commands.tex}
      
@@ -79,7 +80,7 @@ Stichwörter\index{Stichwort} können mit \textbackslash index\{Stichwort\} ange
 \pagestyle{scrplain}
 % 1.1-facher Zeilenabstand für das Literaturverzeichnis und den Anhang 
 \setstretch{1.1}
-\bibliographystyle{alphadin}%alpha}%abbrvdin}%natdin}%plaindin}%apa}
+\bibliographystyle{literatur/IEEEtran}%alphadin}%alpha}%abbrvdin}%natdin}%plaindin}%apa}
 %plaindin = Literaturverzeichnis nach deutschem DIN-Standard siehe Webseite von Lorenzen www.haw-hamburg.de/pers/Lorenzen
 \bibliography{literatur/bib}
 

@@ -1,7 +1,7 @@
 \documentclass[
    12pt,                % Schriftgroesse 12pt
    a4paper,             % Layout fuer Din A4
-   ngerman, 			% deutsche Sprache, global
+   \lang , 			    % Language
    %oneside,            % einseitig
    twoside,             % Layout fuer beidseitigen Druck
    %openright,          % Start auf rechter Seite   
@@ -29,6 +29,7 @@
    pdftex						%berschrift Zusammenfassung einschalten
      ]{scrreprt}
 
+\usepackage{ifthen}
 % Formatierungen
 \usepackage{typearea}
 \areaset[1cm]{16cm}{26cm}
@@ -61,7 +62,7 @@
 \usepackage[all]{hypcap}
 
 % Sprache
-\usepackage[german,ngerman]{babel}
+\ifthenelse{\equal{\lang}{ngerman}}{\usepackage[german, \lang]{babel}}{\usepackage[\lang]{babel}}
 %\usepackage{abstract}
 
 % Mathe und Formeln
@@ -94,9 +95,6 @@
 \usepackage{pgfplots}
 \usetikzlibrary{arrows,shapes,fit,positioning,snakes,backgrounds,shadows}
 
-%%  Zur Darstellung des Euro-Symbols   %%
-\usepackage{eurosym, wasysym}
-\selectlanguage{german}
 
 %%   Fuer Bibtex nach APA Style (American Psychology Association)   %%
 \usepackage[numbers]{natbib}
@@ -110,8 +108,13 @@
 %\renewcommand{\nomlabel}[1]{#1 \dotfill}
 \setlength{\nomitemsep}{-\parsep}
 \makenomenclature
+\ifthenelse{\equal{\lang}{ngerman}}{%
 \renewcommand{\nomname}{Abk\"urzungsverzeichnis}
 \newcommand{\nomaltname}{Symbolverzeichnis}
+}{%
+\renewcommand{\nomname}{List of Abbreviations}
+\newcommand{\nomaltname}{List of Symbols}
+}%
 \newcommand{\nomaltpreamble}{}
 \newcommand{\nomaltpostamble}{}
 \newcommand{\usetwonomenclatures}{\nomenclature[\switchnomitem]{}{}}
@@ -145,8 +148,13 @@
 %\usepackage{algorithmicx}
 \floatname{algorithm}{Algorithmus}
 \algrenewcommand{\algorithmiccomment}[1]{\hskip1em\textcolor{gray!60}{$\rhd$ #1}}
+\ifthenelse{\equal{\lang}{ngerman}}{%
 \renewcommand{\listalgorithmname}{Algorithmen}
 \def\algorithmautorefname{Algorithmus}
+}{%
+\renewcommand{\listalgorithmname}{List of Algorithms}
+\def\algorithmautorefname{Algorithm}
+}
 
 %% Code Highlighting
 \definecolor{mygray}{gray}{.75}
@@ -155,10 +163,15 @@
 \lstset{language=Python}
 \lstset{classoffset=1, morekeywords={mycontext}, keywordstyle=\color{darkgreen}, classoffset=0, keywordstyle=\color{darkblue}}
 \lstset{basicstyle=\small, showstringspaces=false, commentstyle=\color{mygray}, breaklines=true, captionpos=b}
+\ifthenelse{\equal{\lang}{ngerman}}{%
 \renewcommand{\lstlistingname}{Code-Ausschnitt}
 \renewcommand{\lstlistlistingname}{Code-Ausschnitte}
 \def\lstlistingautorefname{Code-Ausschnitt}
-
+}{%
+\renewcommand{\lstlistingname}{Code Listing}
+\renewcommand{\lstlistlistingname}{Code Listings}
+\def\lstlistingautorefname{Code Listing}
+}
 % Schönere Kapitel?
 %\renewcommand{\thechapter}{\Roman{chapter}}
 \usepackage{titlesec}
@@ -175,13 +188,13 @@
 %%                                   TITLE SETUP                                         %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
+\usepackage{wallpaper}
 \renewcommand{\maketitle}{
 \begin{titlepage}
-\begin{flushright}
-\includegraphics[width=25mm]{image/logo.png}
-\end{flushright}
+\ThisCenterWallPaper{1}{image/titlepage.pdf}
+
 \setstretch{1.2}
-\vspace*{10mm}
+\vspace*{55mm}
 \begin{minipage}[t]{2cm}
 \textsc{Thema:}
 \end{minipage}
