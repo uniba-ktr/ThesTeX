@@ -1,0 +1,36 @@
+\chapter{Einleitung}\label{cha:ein}
+Einleitung nach \autoref{cha:ein}
+
+\chapter{Hauptteil}\label{cha:haupt}
+\section{Bilder und Grafiken}\label{sec:grafiken}
+\subsection{Bilder}\label{subsec:bilder}
+Bilder befinden sich im Image-Orgner und lassen sich mit \textbackslash image\{Breite\}\{Datei im Image-Verzeichnis\}\{Beschriftung\}\{Label\} einbinden. \image{3cm}{logo.png}{Uni-Logo}{img:uni} Die Referenzierung erfolg mittels \textbackslash autoref\{Label\}, also z.B. \autoref{img:uni}.
+\subsection{Grafiken mit TikZ}
+Grafiken im TikZ-Framework\footnote{\url{http://www.tn-home.de/TUGDD/Stuff/TikZ_final.pdf}} lassen sich mit dem Befehl \textbackslash scaletikzimage\{Datei im Image Verzeichnis\}\{Beschriftung\}\{Label\}\{Skalierungsfaktor\} einbinden. \scaletikzimage{tikz}{TikZ-Grafik}{img:tikz}{0.9}
+\section{Tabellen}
+Tabellen lassen sich mit dem Environment\\
+\textbackslash begin\{longtable\}[H h t b c]\{Spaltendefinitionen\} ...\\
+\qquad\qquad \textbackslash caption\{Tabellenunterschrift\}\\
+\qquad\qquad \textbackslash label\{Label\}\\
+\textbackslash end\{longtable\}\\
+ definieren\footnote{\url{ftp://ftp.dante.de/pub/tex/macros/latex/required/tools/longtable.pdf}}\\
+\begin{longtable}[H]{|p{0.2\textwidth}|p{0.2\textwidth}|p{0.2\textwidth}|}
+\hline
+A&B&C\\
+\hline
+\caption{Tabelle 1}
+\label{tab:tab1}
+\end{longtable}
+\section{Code-Ausschnitte}
+Pseudo-Code Ausschnitte lassen sich mit \textbackslash pseudo\{Name des Algorithmus\}\{Label\}\{Datei im Code-Verzeichnis\} einbinden.
+\pseudo{Mittelwert}{lst:mean}{code}
+\section{Zitate}
+Mit \textbackslash nocite*\{\} lassen sich alle Einträge in der Bibliography ausgeben. Mit \textbackslash cite[S. xx]\{Key\} lassen sich Zitate einfügen. Z.B. \cite[S. 234]{Ferstl.2008} \nocite*{}
+\section{Abkürzungen und Symbole}
+\subsection{Abkürzungen}
+Abkürzungen können mit \textbackslash nomenclature\{Abk\}\{\textbackslash m\{Abk\}ürzung\} \nomenclature{Abk}{\m{Abk}ürzung} angegeben werden. Diese werden alphabetisch sortiert in ein Abkürzungsverzeichnis aufgenommen.
+\subsection{Symbole}
+Symbole können mit \textbackslash nomenclature[s]\{$E=mc^2$\}\{Energie\}
+\nomenclature[s]{$E=mc^2$}{Energie} in das Symbolverzeichnis aufgenommen werden.
+\section{Stichwortverzeichnis}
+Stichwörter\index{Stichwort} können mit \textbackslash index\{Stichwort\} angelegt werden. Weitere Schlagwörter\index{Stichwort!Schlagwort} hängt man mit \textbackslash index\{Stichwort!Schlagwort\} an \footnote{\url{http://www2.informatik.hu-berlin.de/~piefel/LaTeX-PS/V03-index.pdf}}.
