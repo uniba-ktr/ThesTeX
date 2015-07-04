@@ -13,13 +13,9 @@
    BCOR12mm,            % Korrektur fuer die Bindung
    DIV14,               % DIV-Wert fuer die Erstellung des Satzspiegels, siehe scrguide
    %DIVcalc,							% automatische Berechnung des Satzspiegels
-   halfparskip,         % Absatzabstand statt Absatzeinzug
    %openany,             % Kapitel knnen auf geraden und ungeraden Seiten beginnen
    %openright,							% Kapitel auf rechten Seiten beginnen!
-   bibtotoc,              % Literaturverz. wird ins Inhaltsverzeichnis eingetragen
-   liststotoc,						% Verzeichnisse ins Inhaltsverzeichnis
    %pointlessnumbers,    % Kapitelnummern immer ohne Punkt
-   tablecaptionabove,   % korrekte Abstaende bei TabellenUEBERschriften
    fleqn,               % fleqn: Glgen links (statt mittig)
    %draft,               % Keine Bilder in der Anzeige, overfull hboxes werden angezeigt
    appendixprefix,				%berschriften des Anhangs +"Anhang"
@@ -46,8 +42,6 @@
 % Zeichensätze
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} % T1-kodierte Schriften, korrekte Trennmuster fuer Worte mit Umlauten
-\usepackage[iso]{umlaute}
-\usepackage{lmodern}
 
 \input{config/metainfo.tex}
    
@@ -62,7 +56,7 @@
 \usepackage[all]{hypcap}
 
 % Sprache
-\ifthenelse{\equal{\lang}{ngerman}}{\usepackage[german, \lang]{babel}}{\usepackage[\lang]{babel}}
+\usepackage[\lang]{babel}
 %\usepackage{abstract}
 
 % Mathe und Formeln
@@ -93,7 +87,7 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usetikzlibrary{arrows,shapes,fit,positioning,snakes,backgrounds,shadows}
+\usetikzlibrary{arrows,shapes,fit,positioning,decorations,backgrounds,shadows}
 
 
 %%   Fuer Bibtex nach APA Style (American Psychology Association)   %%
