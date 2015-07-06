@@ -11,5 +11,6 @@
 *.nlo
 *.nls
 *.out
+*.pdf
 *.synctex.gz
 *.toc
