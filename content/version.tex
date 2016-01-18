@@ -1,0 +1,13 @@
+\ifthenelse{\equal{\showbuildnumber}{true}}{
+    \chapter{VERSION}
+    \IfFileExists{build.number}{
+        \section{buildnumber}
+        \verbatiminput{build.number}
+    }{}
+    \section{git}
+    \#: \gitAbbrevHash\\
+    @: \gitAuthorIsoDate\\
+    \gitReferences
+    \subsection{gitinfo2 -- setup}
+    \url{http://mirror.ctan.org/macros/latex/contrib/gitinfo2/}
+}{}

@@ -167,6 +167,7 @@
 {-4ex} % war -2ex
 {\filleft\fontsize{30}{35}\selectfont\scshape} %war 50 statt 30 und 70 statt 45
 [\vspace{-2ex}] %war 0ex
+\usepackage{gitinfo2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                   TITLE SETUP                                         %%
@@ -254,7 +255,7 @@ Ich erkläre hiermit gemäß § 17 Abs. 2 APO, dass ich die vorstehende \degree 
 \definecolor{darkblue}{rgb}{0,.05,.54}
 \definecolor{darkgreen}{rgb}{0,.54,.05}
 \makeatletter
-\hypersetup{pdftitle={\@title}, pdfauthor={\@author}, pdfsubject={\@subject}, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue, citecolor=darkblue, filecolor=darkblue}
+\hypersetup{pdftitle={\@title}, pdfauthor={\@author}, pdfsubject={\@subject}, pdfkeywords={\gitAbbrevHash}, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue, citecolor=darkblue, filecolor=darkblue}
 \makeatother
 \urlstyle{same}
 \usepackage[all]{hypcap}
