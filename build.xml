@@ -1,0 +1,75 @@
+<project name="ThesTeX" default="full">
+	<property name="mainFile" value="arbeit" />
+	<target name="help">
+		<echo>targets: full, fast, clean, latex, bibtex, index, nomenclature, wipe, reset</echo>
+	</target>
+	<target name="full" depends="init, wipe">
+		<antcall target="latex" />
+		<antcall target="bibtex" />
+		<antcall target="index" />
+		<antcall target="nomenclature" />
+		<antcall target="latex" />
+		<antcall target="latex" />
+	</target>
+	<target name="fast" depends="init">
+		<antcall target="latex" />
+		<antcall target="bibtex" />
+		<antcall target="latex" />
+	</target>
+	<target name="init">
+		<!-- dumps build-number in file 'build.number'. Useful for versioning of your documents if included in latex. Add it to git, ignore it, or comment it out, as you prefer -->
+		<buildnumber />
+	</target>
+	<target name="clean">
+		<delete file="${mainFile}.aux" />
+		<delete file="${mainFile}.bbl" />
+		<delete file="${mainFile}.blg" />
+		<delete file="${mainFile}.idx" />
+		<delete file="${mainFile}.ilg" />
+		<delete file="${mainFile}.ind" />
+		<delete file="${mainFile}.loa" />
+		<delete file="${mainFile}.lof" />
+		<delete file="${mainFile}.log" />
+		<delete file="${mainFile}.lot" />
+		<delete file="${mainFile}.nlo" />
+		<delete file="${mainFile}.nls" />
+		<delete file="${mainFile}.out" />
+		<delete file="${mainFile}.synctex.gz" />
+		<delete file="${mainFile}.toc" />
+	</target>
+	<target name="wipe" depends="clean">
+		<delete file="${mainFile}.pdf" />
+	</target>
+	<target name="latex">
+		<exec executable="pdflatex">
+			<arg value="-synctex=1" />
+			<arg value="-interaction=nonstopmode" />
+			<arg value="${mainFile}" />
+		</exec>
+	</target>
+	<target name="bibtex">
+		<exec executable="bibtex">
+			<arg value="${mainFile}" />
+		</exec>
+	</target>
+	<target name="index">
+		<exec executable="makeindex">
+			<arg value="-s" />
+			<arg value="config/index.ist" />
+			<arg value="${mainFile}" />
+		</exec>
+	</target>
+	<target name="nomenclature">
+		<exec executable="makeindex">
+			<arg value="${mainFile}.nlo" />
+			<arg value="-s" />
+			<arg value="nomencl.ist" />
+			<arg value="-o" />
+			<arg value="${mainFile}.nls" />
+		</exec>
+	</target>
+	<target name="reset">
+		<delete file="build.number" />
+	</target>
+</project>
+

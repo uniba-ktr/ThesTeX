@@ -42,18 +42,9 @@
 % Zeichensätze
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} % T1-kodierte Schriften, korrekte Trennmuster fuer Worte mit Umlauten
+\usepackage[mark]{gitinfo2}
 
 \input{config/metainfo.tex}
-   
-% Hyperref
-\usepackage{hyperref}
-\definecolor{darkblue}{rgb}{0,.05,.54}
-\definecolor{darkgreen}{rgb}{0,.54,.05}
-\makeatletter
-\hypersetup{pdftitle={\@title}, pdfauthor={\@author}, pdfsubject={\@subject}, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue, citecolor=darkblue, filecolor=darkblue}
-\makeatother
-\urlstyle{same}
-\usepackage[all]{hypcap}
 
 % Sprache
 \usepackage[\lang]{babel}
@@ -258,6 +249,16 @@ Ich erkläre hiermit gemäß § 17 Abs. 2 APO, dass ich die vorstehende \degree 
 \newpage
 }
 \makeatother
+   
+% Hyperref
+\usepackage{hyperref}
+\definecolor{darkblue}{rgb}{0,.05,.54}
+\definecolor{darkgreen}{rgb}{0,.54,.05}
+\makeatletter
+\hypersetup{pdftitle={\@title}, pdfauthor={\@author}, pdfsubject={\@subject}, pdfkeywords={\gitAbbrevHash}, colorlinks=true, breaklinks=true, linkcolor=darkblue, menucolor=darkblue, urlcolor=darkblue, citecolor=darkblue, filecolor=darkblue}
+\makeatother
+\urlstyle{same}
+\usepackage[all]{hypcap}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
