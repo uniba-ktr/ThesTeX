@@ -5,16 +5,16 @@
 \newcommand{\lang}{ngerman}
 
 \input{config/commands.tex}
-     
+
 \begin{document}
-% 1.1-facher Zeilenabstand für die Titelseite und die Verzeichnisse 
+% 1.1-facher Zeilenabstand für die Titelseite und die Verzeichnisse
 \setstretch{1.1}
 %% Titelseite
 \maketitle
 
 %% Seitenlayout
 \pagestyle{scrplain}
-\cleardoubleemptypage 
+\cleardoubleemptypage
 \pagenumbering{Roman}
 \tableofcontents
 \newpage
@@ -37,7 +37,7 @@
 \pagestyle{scrheadings}
 \pagenumbering{arabic}
 \setcounter{page}{1}
-% 1.5-facher Zeilenabstand für die Arbeit 
+% 1.5-facher Zeilenabstand für die Arbeit
 \setstretch{1.5}
 
 %===============================================================================
@@ -46,19 +46,20 @@
 %
 % hier einzelne Kapitel mit \input{Kapitel-File} einfügen
 %
-
+\ifgit
 \input{content/version}
+\fi
 \input{content/exampleContent}
 
-\cleardoubleemptypage 
+\cleardoubleemptypage
 \pagestyle{scrplain}
-% 1.1-facher Zeilenabstand für das Literaturverzeichnis und den Anhang 
+% 1.1-facher Zeilenabstand für das Literaturverzeichnis und den Anhang
 \setstretch{1.1}
 \bibliographystyle{literatur/IEEEtran}%alphadin}%alpha}%abbrvdin}%natdin}%plaindin}%apa}
 %plaindin = Literaturverzeichnis nach deutschem DIN-Standard siehe Webseite von Lorenzen www.haw-hamburg.de/pers/Lorenzen
 \bibliography{literatur/bib}
 
-\cleardoubleemptypage% 
+\cleardoubleemptypage%
 % Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
 % Sprungmarke mit Phantomsection korrigiert
 \phantomsection%
@@ -72,7 +73,7 @@
 \chapter{Anhang}
 \setstretch{1.1}
 
-\cleardoubleemptypage 
+\cleardoubleemptypage
 \erklaerung
 
 \end{document}
