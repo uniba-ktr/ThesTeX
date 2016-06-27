@@ -23,7 +23,7 @@ git: $(hooks)
 
 $(hooks):
 	cp gitinfo2-hook.txt $(githooks)/$@
-	chmod g+x $(githooks)/$@
+	chmod u+x $(githooks)/$@
 
 docker:
 	docker-compose run builder
