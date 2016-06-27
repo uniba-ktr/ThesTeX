@@ -1,3 +1,4 @@
+<!-- TODO: Introduce Latexmk -->
 <project name="ThesTeX" default="full">
 	<property name="mainFile" value="arbeit" />
 	<target name="help">
@@ -72,4 +73,3 @@
 		<delete file="build.number" />
 	</target>
 </project>
-

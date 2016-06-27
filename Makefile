@@ -1,5 +1,7 @@
 # Copyright 2016, Marcel Großmann <marcel.grossmann@uni-bamberg.de>
 objects = thesis.pdf
+hooks = post-checkout post-commit post-merge
+githooks = .git/hooks
 
 .PHONY: all clean
 
@@ -16,3 +18,12 @@ cleanTemp:
 clean: cleanTemp
 	latexmk -CA
 	rm -f *.synctex.gz
+
+git: $(hooks)
+
+$(hooks):
+	cp gitinfo2-hook.txt $(githooks)/$@
+	chmod g+x $(githooks)/$@
+
+docker:
+	docker-compose run builder

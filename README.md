@@ -35,6 +35,13 @@ Using make, there are different targets available:
 * cleanTemp: clean up temporary latex files
 * all: build pdf and remove temporary files
 * clean: remove all generated output
+* git: setup git for automatic versioning based on git tags
+* docker: run the build in a docker container
+
+### docker
+
+For using Docker, mount the current volume into the `/src` folder of `unibaktr/dock-tex:xenial` and run the make commands.
+Alternatively, just use `docker-compose run builder` to execute the container.
 
 ### ant
 
