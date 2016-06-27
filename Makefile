@@ -3,7 +3,7 @@ objects = thesis.pdf
 hooks = post-checkout post-commit post-merge
 githooks = .git/hooks
 
-.PHONY: all clean
+.PHONY: all clean cleanTemp git docker
 
 # Builds and cleans latex crap
 all: $(objects) cleanTemp
