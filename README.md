@@ -12,7 +12,7 @@ Run `make init` in the cloned directory to setup submodules and versioning of yo
 
  1. First checkout all necessary submodules with `git submodule init` followed by `git submodule update`
  2. Create the directories `graphic`, `code`, `images` and `content`
- 3. Copy `meta/style/gitexinfo.sty`, `meta/style/gitinfo2.sty`, `meta/style/IEEEtran.bst` and `meta/style/IEEEtran.cls` to the root of your cloned directory.
+ 3. Copy `meta/style/gitexinfo.sty`, `meta/style/gitinfo2.sty` and `meta/style/IEEEtran.bst` to the root of your cloned directory.
  4. For versioning of your PDF files copy `meta/style/gitinfo2-hook.txt` to `.git/hooks/post-checkout`, `.git/hooks/post-commit` and `.git/hooks/post-merge` and make these copies executable.
 
 ### Necessary Configurations
