@@ -2,12 +2,51 @@
 %	Konfiguration in texmaker: Options -> Configure Texmaker -> Quick Build -> Select Latexmk + ViewPDF
 %	Entsprechende Informationen in den config/metainfo verändern
 %   Beispieldokument entsteht bei Kompilierung nach oben angegebener Reihenfolge
-\newcommand{\lang}{ngerman}
+\documentclass[
+   12pt,                % Schriftgroesse 12pt
+   a4paper,             % Layout fuer Din A4
+   %oneside,            % einseitig
+   twoside,             % Layout fuer beidseitigen Druck
+   %openright,          % Start auf rechter Seite
+   headinclude,         % Kopfzeile wird Seiten-Layouts mit beruecksichtigt
+   headsepline,         % horizontale Linie unter Kolumnentitel
+	%footinclude,
+	%footexclude,		%fusszeile nicht bercksichtigen
+   %plainheadsepline,    % horizontale Linie auch beim plain-Style
+   BCOR12mm,            % Korrektur fuer die Bindung
+   DIV14,               % DIV-Wert fuer die Erstellung des Satzspiegels, siehe scrguide
+   %DIVcalc,							% automatische Berechnung des Satzspiegels
+   %openany,             % Kapitel knnen auf geraden und ungeraden Seiten beginnen
+   %openright,							% Kapitel auf rechten Seiten beginnen!
+   %pointlessnumbers,    % Kapitelnummern immer ohne Punkt
+   fleqn,               % fleqn: Glgen links (statt mittig)
+   %draft,               % Keine Bilder in der Anzeige, overfull hboxes werden angezeigt
+   appendixprefix,				%berschriften des Anhangs +"Anhang"
+  %chapterprefix,				%berschriften der Kapitel +"KAPITEL"
+  %tablecaptionabove,    %tabellen immer als berschriften
+   abstracton,
+   pdftex						%berschrift Zusammenfassung einschalten
+     ]{scrreprt}
 
-\input{config/commands.tex}
+%===============================================================================
+% zentrale Layout-Angaben und Befehle
+%===============================================================================
+\newcommand\meta{meta}
+\input{\meta/config/commands}
+%===============================================================================
+% LATEX-Dokument
+%===============================================================================
 
+\input{\meta/config/hyphenation}
 \begin{document}
-% 1.1-facher Zeilenabstand für die Titelseite und die Verzeichnisse
+%===============================================================================
+% Zum Kompilieren pdflatex und bibtex ausführen.
+% Konfiguration in texmaker: Options -> Configure Texmaker -> Quick Build -> Select Latexmk + ViewPDF
+% Entsprechende Informationen in den config/metainfo verändern
+% Zur Auswahl der Sprache im folgenden Befehl
+% ngerman für deutsch eintragen, english für Englisch.
+%===============================================================================
+\selectlanguage{ngerman}
 \setstretch{1.1}
 %% Titelseite
 \maketitle
@@ -47,17 +86,17 @@
 % hier einzelne Kapitel mit \input{Kapitel-File} einfügen
 %
 \ifgit
-\input{content/version}
+\input{\meta/exampleContent/version}
 \fi
-\input{content/exampleContent}
+\input{\meta/exampleContent/exampleContentThesis}
 
 \cleardoubleemptypage
 \pagestyle{scrplain}
 % 1.1-facher Zeilenabstand für das Literaturverzeichnis und den Anhang
 \setstretch{1.1}
-\bibliographystyle{literatur/IEEEtran}%alphadin}%alpha}%abbrvdin}%natdin}%plaindin}%apa}
+\bibliographystyle{IEEEtran}%alphadin}%alpha}%abbrvdin}%natdin}%plaindin}%apa}
 %plaindin = Literaturverzeichnis nach deutschem DIN-Standard siehe Webseite von Lorenzen www.haw-hamburg.de/pers/Lorenzen
-\bibliography{literatur/bib}
+\bibliography{\meta/exampleLiterature/bib}
 
 \cleardoubleemptypage%
 % Stichwortverzeichnis soll im Inhaltsverzeichnis auftauchen
