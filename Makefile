@@ -27,10 +27,14 @@ clean:
 	latexmk -CA
 	rm -f *.synctex.gz
 
-init: gitmodules $(hooks) $(styles) $(bibtexstyles) $(classes)
+inittemplate: gitmodules $(hooks) $(styles) $(bibtexstyles) $(classes)
 	mkdir -p graphic code images content
 	test -f gitHeadLocal.gin || ln -s $(base)/.git/gitHeadInfo.gin gitHeadLocal.gin
 	sed -i 's#\\newcommand\\meta.*#\\newcommand\\meta{${meta}}#g' $(main).tex
+
+init: inittemplate
+	sed -i '/# Stylesheets and classes only in meta directory/d' .gitignore
+	sed -i -e '/*.sty/d' -e '/*.cls/d' -e	'/*.bst/d' -e '/*.gin/d' .gitignore
 
 gitmodules:
 	test -d $(meta) || git submodule add $(metaurl) $(meta)
