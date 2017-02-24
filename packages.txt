@@ -19,3 +19,4 @@ xkeyval
 xcolor
 pgf
 float
+pgfplots
