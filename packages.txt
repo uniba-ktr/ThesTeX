@@ -17,3 +17,4 @@ caption
 cancel
 xkeyval
 xcolor
+pgf
