@@ -16,3 +16,4 @@ subfig
 caption
 cancel
 xkeyval
+xcolor
