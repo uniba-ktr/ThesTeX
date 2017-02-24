@@ -20,3 +20,17 @@ xcolor
 pgf
 float
 pgfplots
+moreverb
+algorithms
+algorithmicx
+nomencl
+ulem
+listings
+zapfding
+symbol
+l3packages
+l3kernel
+adjustbox
+collectbox
+relsize
+catoptions
