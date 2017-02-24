@@ -8,6 +8,7 @@ wallpaper
 doublestroke
 units
 wasy
+wasysym
 marvosym
 multirow
 todonotes
