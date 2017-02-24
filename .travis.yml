@@ -1,0 +1,11 @@
+env:
+  global:
+  - CGO_ENABLED=0
+  - GOOS=linux
+  - GOARCH=amd64
+sudo: required
+services:
+- docker
+script:
+- make
+- ls -la | grep pdf
