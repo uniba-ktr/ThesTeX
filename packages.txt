@@ -1,5 +1,7 @@
 koma-script
 ucs
+fourier
+menukeys
 etoolbox
 xstring
 eso-pic
