@@ -15,3 +15,4 @@ todonotes
 subfig
 caption
 cancel
+xkeyval
