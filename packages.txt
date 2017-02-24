@@ -13,3 +13,4 @@ multirow
 todonotes
 subfig
 caption
+cancel
