@@ -3,8 +3,8 @@
 %	Entsprechende Informationen in den config/metainfo verändern
 %   Beispieldokument entsteht bei Kompilierung nach oben angegebener Reihenfolge
 \documentclass[
-   12pt,                % Schriftgroesse 12pt
-   a4paper,             % Layout fuer Din A4
+   fontsize=12pt,                % Schriftgroesse 12pt
+   paper=a4,             % Layout fuer Din A4
    %oneside,            % einseitig
    twoside,             % Layout fuer beidseitigen Druck
    %openright,          % Start auf rechter Seite
@@ -13,8 +13,8 @@
 	%footinclude,
 	%footexclude,		%fusszeile nicht bercksichtigen
    %plainheadsepline,    % horizontale Linie auch beim plain-Style
-   BCOR12mm,            % Korrektur fuer die Bindung
-   DIV14,               % DIV-Wert fuer die Erstellung des Satzspiegels, siehe scrguide
+   BCOR=12mm,            % Korrektur fuer die Bindung
+   DIV=14,               % DIV-Wert fuer die Erstellung des Satzspiegels, siehe scrguide
    %DIVcalc,							% automatische Berechnung des Satzspiegels
    %openany,             % Kapitel knnen auf geraden und ungeraden Seiten beginnen
    %openright,							% Kapitel auf rechten Seiten beginnen!
@@ -24,8 +24,8 @@
    appendixprefix,				%berschriften des Anhangs +"Anhang"
   %chapterprefix,				%berschriften der Kapitel +"KAPITEL"
   %tablecaptionabove,    %tabellen immer als berschriften
-   abstracton,
-   pdftex						%berschrift Zusammenfassung einschalten
+   abstract=true,
+   pagesize=pdftex						%berschrift Zusammenfassung einschalten
      ]{scrreprt}
 
 %===============================================================================
