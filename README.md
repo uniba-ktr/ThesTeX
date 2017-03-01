@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/uniba-ktr/ThesTeX.svg?branch=master)](https://travis-ci.org/uniba-ktr/ThesTeX)
+
 # ThesTeX
 
 LaTeX template for bachelor or master thesis

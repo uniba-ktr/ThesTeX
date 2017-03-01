@@ -1,11 +1,14 @@
-env:
-  global:
-  - CGO_ENABLED=0
-  - GOOS=linux
-  - GOARCH=amd64
-sudo: required
 services:
 - docker
 script:
 - make
 - ls -la | grep pdf
+deploy:
+  provider: releases
+  api_key:
+    secure: $GITHUB_TOKEN
+  file: thesis.pdf
+  skip_cleanup: true
+  on:
+    repo: uniba-ktr/ThesTeX
+    tags: true
