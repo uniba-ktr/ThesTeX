@@ -25,5 +25,5 @@ gitmodules: initialize
 	@make prepare
 
 initialize:
-	@test -f .prepared || rm -rf .git .gitmodules meta
+	@test -f .prepared || ( git log | grep "Update meta" || rm -rf .git .gitmodules meta )
 	@test -f .prepared || ( cd $(base) && ( test -d .git || git init ) )
