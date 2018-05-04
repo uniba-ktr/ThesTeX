@@ -1,6 +1,7 @@
 adjustbox
 algorithmicx
 algorithms
+appendix
 cancel
 caption
 catoptions
