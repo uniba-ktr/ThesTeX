@@ -1,7 +1,6 @@
 adjustbox
 algorithmicx
 algorithms
-appendix
 cancel
 caption
 catoptions
@@ -16,17 +15,21 @@ l3kernel
 l3packages
 listings
 marvosym
+mathtools
 menukeys
 moreverb
 multirow
 nomencl
 pgf
 pgfplots
+polynom
 relsize
 setspace
 subfig
 symbol
+times
 todonotes
+txfonts
 ucs
 ulem
 units
@@ -38,3 +41,4 @@ xcolor
 xkeyval
 xstring
 zapfding
+ragged2e
