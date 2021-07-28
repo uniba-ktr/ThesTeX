@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/uniba-ktr/ThesTeX.svg?branch=master)](https://travis-ci.org/uniba-ktr/ThesTeX)
+[![Build Status](https://travis-ci.com/uniba-ktr/ThesTeX.svg?branch=master)](https://travis-ci.com/uniba-ktr/ThesTeX)
 
 # ThesTeX
 
