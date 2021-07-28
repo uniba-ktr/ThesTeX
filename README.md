@@ -2,7 +2,7 @@
 
 # ThesTeX
 
-LaTeX template for bachelor or master thesis
+LaTeX template for bachelor or master thesis.
 
 ## Setup
 
@@ -40,7 +40,7 @@ Thereafter, only run `make` in the cloned directory to recreate your `pdf` file.
 ## Generating the PDF
 
 Use `latexmk` to generate a readable document, or use `make all` of the `Makefile`.
-If You use texmaker, set `latexmk` as your default build command
+If You use texmaker, set `latexmk` as your default build command.
 
 ## Cleaning Up
 
