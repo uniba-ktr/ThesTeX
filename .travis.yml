@@ -6,7 +6,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: $GITHUB_TOKEN
+    secure: KaWXHITymHtuo4gjlKdFzsLmqWJGbGYm45LBW+iLUYjM+ERUUxBAdVZHYGkDlL6TK45E9qWm8zvMedj1yfu6SVjV1SJiE4vcSydYJOiza5kX88CvP+VEgNP/0gDllJB3La86Uk+jSUPS6z1RMG57Fu1n/hjJr42p+rN3O+6+rTFdi6mUU7dced9PeyUjP1JdrwgLmleDkqhTW1zLwwW9kYk9rgJsjNVwjOO5FzzYg35P7CU/5OD3xhD11I71cs+bHOJp5Zix+OsQ6Fp5nNIWiVgmyvfKETetLzoc8kWgVQmCiDkrW/32KaUi9XjcVgMCj28TYKZuoPEl8uEOUlus2pTB5HGxBu0WVVr28CEDK5wKigf8pmA6qNUQxvwrVth6t1DqgVboEHEILOUiNu0zaI7gROF527jOoux/vWCfNQFuwIbGpTqQq7LMO0wvlAE8EkhcpaQHaINjaRwYDk2aTbBeVKp7och9923RHbpqzIqb6AhnMM3uNM/z2IVw0X7oiAfF34F+A0ZToF+c6K6JbbgsE7UAllTEIlwZX46F2MOgJvb1U29BQSEc0mqF4dANCltJ/AquGA7QPWxs02vHLG/pYCEKsRP14Xlr9b+uvcnrXqLimy9e/EHX0BunX3v/MrGVDCOwOXFIZKuZGqzFf72Prsval4xq8RDDeYh66FU=
   file: thesis.pdf
   skip_cleanup: true
   on:
