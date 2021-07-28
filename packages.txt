@@ -9,6 +9,7 @@ collectbox
 doublestroke
 eso-pic
 etoolbox
+everysel
 float
 fourier
 koma-script
