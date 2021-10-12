@@ -5,7 +5,7 @@ base := .
 # Folder to clone TeXMeta to, relatively to $base
 meta := $(base)/meta
 main := thesis
-bibtexstyles := IEEEtran.bst
+bibtexstyles := IEEEtranSN.bst
 # TeXMeta location
 metaurl := "https://github.com/uniba-ktr/TeXMeta.git"
 
