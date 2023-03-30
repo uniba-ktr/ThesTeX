@@ -1,0 +1,24 @@
+name: Local Build
+
+env:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+
+on:
+  push:
+    branches:
+      - '**'
+      - '!main'
+    pull_request:
+      branches:
+        - 'main'
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v3.4.0
+    - name: Build and load
+      run: make
