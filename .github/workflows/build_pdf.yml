@@ -20,5 +20,9 @@ jobs:
 
     - name: Checkout
       uses: actions/checkout@v3.4.0
+    - name: Configure GIT
+      run: |
+        git config --global user.email "ci@example.com"
+        git config --global user.name "ci"
     - name: Build and load
       run: make
