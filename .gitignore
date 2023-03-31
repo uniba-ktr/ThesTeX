@@ -21,6 +21,18 @@
 *.cls
 *.bst
 *.gin
+# glossary files
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.ist
+*.glsdefs
+*.slg
+*.syg
+*.syi
 # Do not initialize twice
 .prepared
 packages.txt

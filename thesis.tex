@@ -38,6 +38,7 @@
 % LATEX-Dokument
 %===============================================================================
 
+
 \input{\meta/config/hyphenation}
 \begin{document}
 %===============================================================================
@@ -70,8 +71,13 @@
 %%   Abkuerzungs- und Symbolverzeichnis   %%
 %%   Zum alphabetischen Sortieren in der Konsole "makeindex filename.nlo -s nomencl.ist -o filename.nls" ausfuehren; nach dem zweiten Kompilieren erscheint das Abkuerzungsverzeichnis dann im Dokument   %%
 %%   Alternativ im TeXnicCenter unter Ausgabe - Ausgabeprofile definieren - Nachbearbeitung einen Postprocessor ("Neu"-Button oben rechts) erstellen. Nach Bennenung unten als Anwendung Makeindex (aus Verzeichnis "./miktex/bin/makeindex.exe") auswaehlen und als Argumente folgenden String setzen: "%bm".nlo -s nomencl.ist -o "%bm".nls"   %%
-\usetwonomenclatures
-\printnomenclature
+%\usetwonomenclatures
+%\printnomenclature
+
+% Glossar und Akronymverzeichnis, ungenutzte Verzeichnisse bitte auskommentieren
+\printglossary[type=\acronymtype]  % list of acronyms
+\printglossary[type=symbolslist]   % list of symbols
+\printglossary[type=main]                     % main glossary
 
 \cleardoubleemptypage
 \pagestyle{scrheadings}
@@ -90,6 +96,7 @@
 \input{\meta/exampleContent/version}
 \fi
 \input{\meta/exampleContent/exampleContentThesis}
+
 
 \cleardoubleemptypage
 \pagestyle{scrplain}
