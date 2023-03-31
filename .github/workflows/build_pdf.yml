@@ -27,3 +27,12 @@ jobs:
         git config --global user.name "ci"
     - name: Build and load
       run: make
+    - name: Show and move generated pdf
+      run: |
+        ls -la | grep pdf
+        mv thesis.pdf /tmp/thesis.pdf
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: thesis.pdf
+        path: /tmp/thesis.pdf
