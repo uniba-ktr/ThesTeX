@@ -38,9 +38,6 @@
 % LATEX-Dokument
 %===============================================================================
 
-\usepackage[acronym,toc]{glossaries}
-
-\makeglossaries
 
 \input{\meta/config/hyphenation}
 \begin{document}
@@ -77,8 +74,10 @@
 %\usetwonomenclatures
 %\printnomenclature
 
-% Glossar und Akronymverzeichnis
-\printglossaries
+% Glossar und Akronymverzeichnis, ungenutzte Verzeichnisse bitte auskommentieren
+\printglossary[type=\acronymtype,style=long]  % list of acronyms
+\printglossary[type=symbolslist,style=long]   % list of symbols
+\printglossary[type=main]                     % main glossary
 
 \cleardoubleemptypage
 \pagestyle{scrheadings}

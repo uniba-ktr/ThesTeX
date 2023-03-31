@@ -30,6 +30,9 @@
 *.gls
 *.ist
 *.glsdefs
+*.slg
+*.syg
+*.syi
 # Do not initialize twice
 .prepared
 packages.txt
